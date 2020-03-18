@@ -34,12 +34,16 @@
                                 <rect key="frame" x="110" y="294" width="218" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="218" id="8yF-Sq-ONW"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="x4h-QZ-jRs"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k9L-nS-EU3">
                                 <rect key="frame" x="110" y="388" width="218" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="218" id="8LK-b0-sM8"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -69,8 +73,8 @@
                                     <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Py-aF-Yzs"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qW-Gb-1hf">
-                                <rect key="frame" x="336" y="390" width="62" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qW-Gb-1hf">
+                                <rect key="frame" x="330" y="390" width="62" height="30"/>
                                 <state key="normal" title="忘记密码"/>
                                 <connections>
                                     <action selector="forgetPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m4p-Ig-EnJ"/>
@@ -95,6 +99,7 @@
                             <constraint firstItem="Owq-hY-Hxe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="hGR-sy-gB6"/>
                             <constraint firstItem="VuE-AA-5cF" firstAttribute="top" secondItem="k9L-nS-EU3" secondAttribute="bottom" constant="80" id="lRO-Tg-CmZ"/>
                             <constraint firstItem="0oU-8k-Gba" firstAttribute="centerY" secondItem="VuE-AA-5cF" secondAttribute="centerY" id="neX-1M-FUF"/>
+                            <constraint firstItem="5qW-Gb-1hf" firstAttribute="leading" secondItem="k9L-nS-EU3" secondAttribute="trailing" constant="2" id="teG-ay-dXJ"/>
                             <constraint firstItem="zdh-A3-Qpq" firstAttribute="width" secondItem="Owq-hY-Hxe" secondAttribute="width" id="upd-4j-CYk"/>
                             <constraint firstItem="k9L-nS-EU3" firstAttribute="centerX" secondItem="Hzz-kE-GEd" secondAttribute="centerX" id="y6y-iT-d5s"/>
                         </constraints>
@@ -103,7 +108,7 @@
                     <connections>
                         <outlet property="password" destination="k9L-nS-EU3" id="mxo-d4-dej"/>
                         <outlet property="userName" destination="Hzz-kE-GEd" id="p8C-AG-IiA"/>
-                        <segue destination="Ruj-iS-IXK" kind="show" identifier="forwardForgetPasswordPage" id="ChK-rp-p7s"/>
+                        <segue destination="Ruj-iS-IXK" kind="show" identifier="forwardForgetPasswordView" id="ChK-rp-p7s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -138,10 +143,10 @@
             </objects>
             <point key="canvasLocation" x="1202.8985507246377" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Forget Password View Controller-->
         <scene sceneID="yss-nU-wBM">
             <objects>
-                <viewController id="Ruj-iS-IXK" sceneMemberID="viewController">
+                <viewController id="Ruj-iS-IXK" customClass="ForgetPasswordViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6rC-SI-Ldc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -161,6 +166,9 @@
                         <viewLayoutGuide key="safeArea" id="DbX-it-HTy"/>
                     </view>
                     <navigationItem key="navigationItem" id="fAz-EA-FhN"/>
+                    <connections>
+                        <outlet property="noticeLabel" destination="7Ku-Cq-Smf" id="tRR-Nx-jJD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ff9-EA-Yzm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6205A6702420DF2D008A502D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6205A66F2420DF2D008A502D /* AppDelegate.m */; };
+		5D5B934A1E4CF828C2837C21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B93158B28DD83CDA028F0 /* AppDelegate.m */; };
+		5D5B9729AAB5CAA83A0A489C /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B9AC6CCB609E8994A5138 /* ForgetPasswordViewController.m */; };
 		6205A6732420DF2D008A502D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6205A6722420DF2D008A502D /* SceneDelegate.m */; };
 		6205A6762420DF2D008A502D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6205A6752420DF2D008A502D /* ViewController.m */; };
 		6205A6792420DF2D008A502D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6205A6772420DF2D008A502D /* Main.storyboard */; };
@@ -36,9 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5D5B91517A33799E55AB8207 /* ForgetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPasswordViewController.h; sourceTree = "<group>"; };
+		5D5B93158B28DD83CDA028F0 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5D5B9AC6CCB609E8994A5138 /* ForgetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPasswordViewController.m; sourceTree = "<group>"; };
+		5D5B9EF9367D9B6DE4E0C04D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6205A66B2420DF2D008A502D /* single-view-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "single-view-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6205A66E2420DF2D008A502D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		6205A66F2420DF2D008A502D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6205A6712420DF2D008A502D /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		6205A6722420DF2D008A502D /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		6205A6742420DF2D008A502D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -81,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D5B9196D3222F0E9BBFBD4F /* ForgetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				5D5B91517A33799E55AB8207 /* ForgetPasswordViewController.h */,
+				5D5B9AC6CCB609E8994A5138 /* ForgetPasswordViewController.m */,
+			);
+			path = ForgetPassword;
+			sourceTree = "<group>";
+		};
 		6205A6622420DF2D008A502D = {
 			isa = PBXGroup;
 			children = (
@@ -104,8 +116,6 @@
 		6205A66D2420DF2D008A502D /* single-view-demo */ = {
 			isa = PBXGroup;
 			children = (
-				6205A66E2420DF2D008A502D /* AppDelegate.h */,
-				6205A66F2420DF2D008A502D /* AppDelegate.m */,
 				6205A6712420DF2D008A502D /* SceneDelegate.h */,
 				6205A6722420DF2D008A502D /* SceneDelegate.m */,
 				6205A6742420DF2D008A502D /* ViewController.h */,
@@ -115,6 +125,9 @@
 				6205A67C2420DF2E008A502D /* LaunchScreen.storyboard */,
 				6205A67F2420DF2E008A502D /* Info.plist */,
 				6205A6802420DF2E008A502D /* main.m */,
+				5D5B9196D3222F0E9BBFBD4F /* ForgetPassword */,
+				5D5B9EF9367D9B6DE4E0C04D /* AppDelegate.h */,
+				5D5B93158B28DD83CDA028F0 /* AppDelegate.m */,
 			);
 			path = "single-view-demo";
 			sourceTree = "<group>";
@@ -268,9 +281,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6205A6762420DF2D008A502D /* ViewController.m in Sources */,
-				6205A6702420DF2D008A502D /* AppDelegate.m in Sources */,
 				6205A6812420DF2E008A502D /* main.m in Sources */,
 				6205A6732420DF2D008A502D /* SceneDelegate.m in Sources */,
+				5D5B934A1E4CF828C2837C21 /* AppDelegate.m in Sources */,
+				5D5B9729AAB5CAA83A0A489C /* ForgetPasswordViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

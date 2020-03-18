@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ForgetPasswordViewController.h"
 
 @interface ViewController ()
 
@@ -29,7 +30,14 @@
 
 //使用编码方式跳转页面
 - (IBAction)forgetPassword:(id)sender {
-    [self performSegueWithIdentifier:@"forwardForgetPasswordPage" sender:self];
+    [self performSegueWithIdentifier:@"forwardForgetPasswordView" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(nullable id)sender {
+    if ([segue.identifier isEqual:@"forwardForgetPasswordView"]) {
+        ForgetPasswordViewController *viewController = [segue destinationViewController];
+        viewController.noticeDetail = @"忘了就忘了吧!嘻嘻嘻嘻";
+    }
 }
 
 @end
