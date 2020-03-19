@@ -51,20 +51,20 @@
                                 <rect key="frame" x="254" y="502" width="80" height="30"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="hTg-Z3-k0H"/>
+                                    <constraint firstAttribute="width" constant="80" id="cJY-mB-hQ3"/>
                                 </constraints>
                                 <state key="normal" title="注册">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="rf1-at-Qgy" kind="show" id="E3C-gZ-T72"/>
+                                    <action selector="registerAccount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6DY-ir-HOI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VuE-AA-5cF">
                                 <rect key="frame" x="80" y="502" width="80" height="30"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="PfD-VS-NkS"/>
+                                    <constraint firstAttribute="width" constant="80" id="cyh-Iq-nrG"/>
                                 </constraints>
                                 <state key="normal" title="登陆">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -83,6 +83,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5qW-Gb-1hf" secondAttribute="trailing" constant="22" id="1TL-pj-TPQ"/>
                             <constraint firstItem="zdh-A3-Qpq" firstAttribute="leading" secondItem="Owq-hY-Hxe" secondAttribute="leading" id="FiP-o1-tdK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0oU-8k-Gba" secondAttribute="trailing" constant="80" id="GzJ-S5-erd"/>
                             <constraint firstItem="Owq-hY-Hxe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="250" id="HPc-8z-oeG"/>
@@ -95,12 +96,12 @@
                             <constraint firstItem="k9L-nS-EU3" firstAttribute="centerY" secondItem="zdh-A3-Qpq" secondAttribute="centerY" id="bf9-0n-cfD"/>
                             <constraint firstItem="zdh-A3-Qpq" firstAttribute="top" secondItem="Owq-hY-Hxe" secondAttribute="bottom" constant="60" id="dGi-MS-7oJ"/>
                             <constraint firstItem="VuE-AA-5cF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="diC-Db-zuc"/>
-                            <constraint firstItem="0oU-8k-Gba" firstAttribute="width" secondItem="VuE-AA-5cF" secondAttribute="width" id="eb2-8U-Ofb"/>
                             <constraint firstItem="Owq-hY-Hxe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="hGR-sy-gB6"/>
                             <constraint firstItem="VuE-AA-5cF" firstAttribute="top" secondItem="k9L-nS-EU3" secondAttribute="bottom" constant="80" id="lRO-Tg-CmZ"/>
                             <constraint firstItem="0oU-8k-Gba" firstAttribute="centerY" secondItem="VuE-AA-5cF" secondAttribute="centerY" id="neX-1M-FUF"/>
                             <constraint firstItem="5qW-Gb-1hf" firstAttribute="leading" secondItem="k9L-nS-EU3" secondAttribute="trailing" constant="2" id="teG-ay-dXJ"/>
                             <constraint firstItem="zdh-A3-Qpq" firstAttribute="width" secondItem="Owq-hY-Hxe" secondAttribute="width" id="upd-4j-CYk"/>
+                            <constraint firstItem="k9L-nS-EU3" firstAttribute="leading" secondItem="zdh-A3-Qpq" secondAttribute="trailing" constant="8" id="uxP-rJ-NQh"/>
                             <constraint firstItem="k9L-nS-EU3" firstAttribute="centerX" secondItem="Hzz-kE-GEd" secondAttribute="centerX" id="y6y-iT-d5s"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -109,39 +110,12 @@
                         <outlet property="password" destination="k9L-nS-EU3" id="mxo-d4-dej"/>
                         <outlet property="userName" destination="Hzz-kE-GEd" id="p8C-AG-IiA"/>
                         <segue destination="Ruj-iS-IXK" kind="show" identifier="forwardForgetPasswordView" id="ChK-rp-p7s"/>
+                        <segue destination="apt-N3-tXt" kind="show" identifier="forwardRegisterAccountView" id="nqh-QE-NK8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="LJN-ES-jjI">
-            <objects>
-                <viewController id="rf1-at-Qgy" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vfl-36-iCH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="注册页面尚未完成" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCB-tx-DxL">
-                                <rect key="frame" x="137.5" y="411" width="139" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="WCB-tx-DxL" firstAttribute="centerX" secondItem="vfl-36-iCH" secondAttribute="centerX" id="f98-FC-oXe"/>
-                            <constraint firstItem="WCB-tx-DxL" firstAttribute="centerY" secondItem="vfl-36-iCH" secondAttribute="centerY" id="l5t-BA-i0o"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="FqP-bE-Ocv"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="ZZM-dO-Jgf"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9fC-zy-hWp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1202.8985507246377" y="137.94642857142856"/>
+            <point key="canvasLocation" x="76.811594202898561" y="132.58928571428572"/>
         </scene>
         <!--Forget Password View Controller-->
         <scene sceneID="yss-nU-wBM">
@@ -172,7 +146,38 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ff9-EA-Yzm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="134.78260869565219" y="782.8125"/>
+            <point key="canvasLocation" x="132" y="884"/>
+        </scene>
+        <!--Register Account View Controller-->
+        <scene sceneID="8Sj-Oy-yl9">
+            <objects>
+                <viewController storyboardIdentifier="registerAccountView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="apt-N3-tXt" customClass="RegisterAccountViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xzv-Iz-z5f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="注册页面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Dx-3i-57l">
+                                <rect key="frame" x="172.5" y="411" width="69.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3Dx-3i-57l" firstAttribute="centerX" secondItem="xzv-Iz-z5f" secondAttribute="centerX" id="clW-Gy-hFI"/>
+                            <constraint firstItem="3Dx-3i-57l" firstAttribute="centerY" secondItem="xzv-Iz-z5f" secondAttribute="centerY" id="nKc-B2-Q8B"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="M1X-Wv-kPb"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="is5-uT-pgS"/>
+                    <connections>
+                        <outlet property="noticeLabel" destination="3Dx-3i-57l" id="9Jb-hF-tK2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O9b-na-ke5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1006" y="133"/>
         </scene>
     </scenes>
 </document>

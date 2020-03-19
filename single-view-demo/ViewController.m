@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ForgetPasswordViewController.h"
+#import "RegisterAccountViewController.h"
 
 @interface ViewController ()
 
@@ -28,15 +29,29 @@
     NSLog(@"password is %@", [_password text]);
 }
 
-//使用编码方式跳转页面
+- (IBAction)registerAccount:(id)sender {
+//    使用showViewController跳转页面，目标页面需要在viewDidLoad中添加元素
+//    RegisterAccountViewController *viewController = [[RegisterAccountViewController alloc] init];
+//    viewController.noticeDetail = @"注册功能暂未开放！嘻嘻嘻嘻";
+//    [self showViewController:viewController sender:self];
+    [self performSegueWithIdentifier:@"forwardRegisterAccountView" sender:self];
+}
+
+
+//使用segue跳转页面并且传值
 - (IBAction)forgetPassword:(id)sender {
     [self performSegueWithIdentifier:@"forwardForgetPasswordView" sender:self];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(nullable id)sender {
+    if ([segue.identifier isEqual:@"forwardRegisterAccountView"]) {
+        RegisterAccountViewController *viewController = [segue destinationViewController];
+        viewController.noticeDetail = @"注册功能暂未开放！嘻嘻嘻嘻";
+    }
+
     if ([segue.identifier isEqual:@"forwardForgetPasswordView"]) {
         ForgetPasswordViewController *viewController = [segue destinationViewController];
-        viewController.noticeDetail = @"忘了就忘了吧!嘻嘻嘻嘻";
+        viewController.noticeDetail = @"忘了就忘了吧！嘻嘻嘻嘻";
     }
 }
 
