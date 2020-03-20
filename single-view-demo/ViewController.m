@@ -30,12 +30,26 @@
 }
 
 - (IBAction)registerAccount:(id)sender {
-//    使用showViewController跳转页面，目标页面需要在viewDidLoad中添加元素
+    [self forwardResisterAccountViewByPresent];
+}
+
+//使用storyboard+ViewController's identifier跳转页面
+- (void)forwardResisterAccountViewByPresent {
+    //使用name获取storyboard
+//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+
+    UIStoryboard *storyboard = self.storyboard;
+    RegisterAccountViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"registerAccountViewController"];
+    viewController.noticeDetail = @"注册功能暂未开放！嘻嘻嘻嘻";
+    [self presentViewController:viewController animated:YES completion:nil];
+}
+
+//使用showViewController跳转页面，目标页面需要在viewDidLoad中添加元素
+//- (void)forwardResisterAccountViewByShow {
 //    RegisterAccountViewController *viewController = [[RegisterAccountViewController alloc] init];
 //    viewController.noticeDetail = @"注册功能暂未开放！嘻嘻嘻嘻";
 //    [self showViewController:viewController sender:self];
-    [self performSegueWithIdentifier:@"forwardRegisterAccountView" sender:self];
-}
+//}
 
 
 //使用segue跳转页面并且传值

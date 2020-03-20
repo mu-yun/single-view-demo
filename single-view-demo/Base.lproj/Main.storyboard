@@ -152,7 +152,7 @@
         <!--Register Account View Controller-->
         <scene sceneID="8Sj-Oy-yl9">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="apt-N3-tXt" customClass="RegisterAccountViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="registerAccountViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="apt-N3-tXt" customClass="RegisterAccountViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xzv-Iz-z5f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
