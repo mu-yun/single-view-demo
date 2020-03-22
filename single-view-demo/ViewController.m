@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "ForgetPasswordViewController.h"
 #import "RegisterAccountViewController.h"
+#import "HomePageViewController.h"
+#import "MovieListViewController.h"
 
 @interface ViewController ()
 
@@ -27,10 +29,15 @@
 - (IBAction)login:(id)sender {
     NSLog(@"username is %@", [_userName text]);
     NSLog(@"password is %@", [_password text]);
+
+    UIStoryboard *storyboard = self.storyboard;
+    MovieListViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"movieListViewController"];
+    [self presentViewController:viewController animated:YES completion:nil];
 }
 
 - (IBAction)registerAccount:(id)sender {
-    [self forwardResisterAccountViewByPresent];
+    [self performSegueWithIdentifier:@"forwardRegisterAccountView" sender:self];
+//    [self forwardResisterAccountViewByPresent];
 }
 
 //使用storyboard+ViewController's identifier跳转页面
@@ -41,6 +48,7 @@
     UIStoryboard *storyboard = self.storyboard;
     RegisterAccountViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"registerAccountViewController"];
     viewController.noticeDetail = @"注册功能暂未开放！嘻嘻嘻嘻";
+
     [self presentViewController:viewController animated:YES completion:nil];
 }
 

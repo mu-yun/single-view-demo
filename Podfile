@@ -6,6 +6,7 @@ target 'single-view-demo' do
   use_frameworks!
 
   # Pods for single-view-demo
+  pod 'SDWebImage'
 
   target 'single-view-demoTests' do
     inherit! :search_paths
