@@ -9,8 +9,9 @@
 #import "ViewController.h"
 #import "ForgetPasswordViewController.h"
 #import "RegisterAccountViewController.h"
-#import "HomePageViewController.h"
 #import "MovieListViewController.h"
+#import "AppDelegate.h"
+#import "SceneDelegate.h"
 
 @interface ViewController ()
 
@@ -31,8 +32,14 @@
     NSLog(@"password is %@", [_password text]);
 
     UIStoryboard *storyboard = self.storyboard;
-    MovieListViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"movieListViewController"];
-    [self presentViewController:viewController animated:YES completion:nil];
+    UITabBarController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"tabBarController"];
+    //弹出页面
+//    [self presentViewController:viewController animated:YES completion:nil];
+    //跳转页面，并且将viewController设置为rootViewController TODO why?
+    UIWindowScene *scene = [UIApplication sharedApplication].openSessions.allObjects.lastObject.scene;
+    SceneDelegate *sceneDelegate = (SceneDelegate *) scene.delegate;
+    sceneDelegate.window.rootViewController = viewController;
+    [sceneDelegate.window makeKeyAndVisible];
 
 }
 

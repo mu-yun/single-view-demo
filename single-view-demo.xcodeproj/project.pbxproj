@@ -20,7 +20,6 @@
 		6205A6812420DF2E008A502D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6205A6802420DF2E008A502D /* main.m */; };
 		6205A68B2420DF2F008A502D /* single_view_demoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6205A68A2420DF2F008A502D /* single_view_demoTests.m */; };
 		6205A6962420DF2F008A502D /* single_view_demoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6205A6952420DF2F008A502D /* single_view_demoUITests.m */; };
-		627D36132427571B00B8DCEB /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 627D36122427571B00B8DCEB /* HomePageViewController.m */; };
 		627D361624275D2000B8DCEB /* MovieListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 627D361524275D2000B8DCEB /* MovieListViewController.m */; };
 		627D3619242788CF00B8DCEB /* MovieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 627D3618242788CF00B8DCEB /* MovieTableViewCell.m */; };
 		62F6F6E2242295E800B7D820 /* RegisterAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F6F6E1242295E800B7D820 /* RegisterAccountViewController.m */; };
@@ -74,8 +73,6 @@
 		6205A6912420DF2F008A502D /* single-view-demoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "single-view-demoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6205A6952420DF2F008A502D /* single_view_demoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = single_view_demoUITests.m; sourceTree = "<group>"; };
 		6205A6972420DF2F008A502D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		627D36112427571B00B8DCEB /* HomePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
-		627D36122427571B00B8DCEB /* HomePageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = "<group>"; };
 		627D361424275D2000B8DCEB /* MovieListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieListViewController.h; sourceTree = "<group>"; };
 		627D361524275D2000B8DCEB /* MovieListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieListViewController.m; sourceTree = "<group>"; };
 		627D3617242788CF00B8DCEB /* MovieTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieTableViewCell.h; sourceTree = "<group>"; };
@@ -150,15 +147,6 @@
 			path = RegisterAccount;
 			sourceTree = "<group>";
 		};
-		5D5B9D83E20F4CCA49675982 /* HomePage */ = {
-			isa = PBXGroup;
-			children = (
-				627D36112427571B00B8DCEB /* HomePageViewController.h */,
-				627D36122427571B00B8DCEB /* HomePageViewController.m */,
-			);
-			path = HomePage;
-			sourceTree = "<group>";
-		};
 		6205A6622420DF2D008A502D = {
 			isa = PBXGroup;
 			children = (
@@ -197,7 +185,6 @@
 				5D5B9EF9367D9B6DE4E0C04D /* AppDelegate.h */,
 				5D5B93158B28DD83CDA028F0 /* AppDelegate.m */,
 				5D5B98868E42248D2537CC1D /* RegisterAccount */,
-				5D5B9D83E20F4CCA49675982 /* HomePage */,
 				5D5B939CFD1B7641FC18D8DF /* MovieList */,
 			);
 			path = "single-view-demo";
@@ -488,7 +475,6 @@
 				6205A6732420DF2D008A502D /* SceneDelegate.m in Sources */,
 				627D3619242788CF00B8DCEB /* MovieTableViewCell.m in Sources */,
 				62F6F6E2242295E800B7D820 /* RegisterAccountViewController.m in Sources */,
-				627D36132427571B00B8DCEB /* HomePageViewController.m in Sources */,
 				5D5B934A1E4CF828C2837C21 /* AppDelegate.m in Sources */,
 				5D5B9A7919D89B330B91330E /* ForgetPasswordViewController.m in Sources */,
 				5D5B99210521DF24A95C9DBF /* MovieViewModel.m in Sources */,
