@@ -6,6 +6,7 @@ target 'single-view-demo' do
   use_frameworks!
 
   # Pods for single-view-demo
+  pod 'Masonry'
   pod 'SDWebImage'
   pod 'AFNetworking', '~> 3.0'
 

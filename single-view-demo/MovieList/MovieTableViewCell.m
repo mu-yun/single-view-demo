@@ -29,7 +29,7 @@
     // 1,根据URL 通过URLsession 下载 data
     // 2，data 转化成 image
     // 3， image 加载到 imageView
-//    [(SDAnimatedImageView *) self.movieImageView sd_setImageWithURL:[NSURL URLWithString:movie.imageUrl]];
+    [(SDAnimatedImageView *) self.movieImageView sd_setImageWithURL:[NSURL URLWithString:movie.imageUrl]];
 }
 
 @end
