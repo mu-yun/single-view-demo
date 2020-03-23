@@ -33,14 +33,16 @@
     UIStoryboard *storyboard = self.storyboard;
     MovieListViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"movieListViewController"];
     [self presentViewController:viewController animated:YES completion:nil];
+
 }
 
 - (IBAction)registerAccount:(id)sender {
-    [self performSegueWithIdentifier:@"forwardRegisterAccountView" sender:self];
-//    [self forwardResisterAccountViewByPresent];
+//    [self performSegueWithIdentifier:@"forwardRegisterAccountView" sender:self];
+    [self forwardResisterAccountViewByPresent];
+//    [self forwardResisterAccountViewByShow];
 }
 
-//使用storyboard+ViewController's identifier跳转页面
+//使用storyboard+ViewController's identifier获取ViewController，然后跳转页面
 - (void)forwardResisterAccountViewByPresent {
     //使用name获取storyboard
 //    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
@@ -50,14 +52,16 @@
     viewController.noticeDetail = @"注册功能暂未开放！嘻嘻嘻嘻";
 
     [self presentViewController:viewController animated:YES completion:nil];
+    //也可以使用show方法 TODO why？
+    //    [self showViewController:viewController sender:self];
 }
 
-//使用showViewController跳转页面，目标页面需要在viewDidLoad中添加元素
-//- (void)forwardResisterAccountViewByShow {
-//    RegisterAccountViewController *viewController = [[RegisterAccountViewController alloc] init];
-//    viewController.noticeDetail = @"注册功能暂未开放！嘻嘻嘻嘻";
-//    [self showViewController:viewController sender:self];
-//}
+//使用alloc 和init获取ViewController，目标页面需要在viewDidLoad中添加元素，（必须调用show方法）TODO why？
+- (void)forwardResisterAccountViewByShow {
+    RegisterAccountViewController *viewController = [[RegisterAccountViewController alloc] init];
+    viewController.noticeDetail = @"注册功能暂未开放！嘻嘻嘻嘻";
+    [self showViewController:viewController sender:self];
+}
 
 
 //使用segue跳转页面并且传值
