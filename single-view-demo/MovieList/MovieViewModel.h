@@ -7,13 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @class Movie;
 
 
-@interface MovieViewModel : NSObject
-
-@property (nonatomic) NSMutableArray<Movie *> *movies;
+@interface MovieViewModel : NSObject<UITableViewDataSource>
 
 - (instancetype)initWithMovieUrl:(NSString *)movieUrl;
 

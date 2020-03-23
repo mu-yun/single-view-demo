@@ -9,8 +9,9 @@
 #import "MovieListViewController.h"
 #import "MovieViewModel.h"
 #import "MovieTableViewCell.h"
+#import "Movie.h"
 
-@interface MovieListViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface MovieListViewController () <UITableViewDelegate>
 
 @property(weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -22,26 +23,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
-    self.viewModel = [[MovieViewModel alloc] initWithMovieUrl:@"https://douban.uieee.com/v2/movie/top250"];
     // Do any additional setup after loading the view.
-}
+    self.viewModel = [[MovieViewModel alloc] initWithMovieUrl:@"https://douban.uieee.com/v2/movie/top250"];
 
-- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    MovieTableViewCell *movieTableViewCell = [tableView dequeueReusableCellWithIdentifier:@"movieTableViewCell"];
-    if (!movieTableViewCell) {
-        movieTableViewCell = [[MovieTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"movieTableViewCell"];
-    }
-    Movie *movie = [self.viewModel.movies objectAtIndex:[indexPath row]];
-    [movieTableViewCell initFromMovie:movie];
-    return movieTableViewCell;
-}
+    //dataSource和delegate可以在storyboard通过拖拽指定
+    self.tableView.dataSource = self.viewModel;
+    self.tableView.delegate = self;
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.viewModel.movies count];
+    //代码的方式注册自定义TableViewCell，针对xib文件
+    //[self.tableView registerClass:[MovieTableViewCell class] forCellReuseIdentifier:@"movieTableViewCell"];
 }
-
 
 /*
 #pragma mark - Navigation

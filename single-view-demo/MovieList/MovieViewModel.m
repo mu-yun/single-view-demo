@@ -8,10 +8,11 @@
 
 #import "MovieViewModel.h"
 #import "Movie.h"
+#import "MovieTableViewCell.h"
 
 
 @implementation MovieViewModel {
-
+    NSMutableArray<Movie *> *movies;
 }
 
 - (instancetype)initWithMovieUrl:(NSString *)movieUrl {
@@ -1842,13 +1843,13 @@
         NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
         NSArray *moviesArray = [dataDictionary objectForKey:@"subjects"];
 //                                                NSLog(moviesArray);
-        self.movies = [NSMutableArray arrayWithCapacity:[moviesArray count]];
+        movies = [NSMutableArray arrayWithCapacity:[moviesArray count]];
         for (NSDictionary *movieDictionary in moviesArray) {
             Movie *movie = [[Movie alloc] initWithTitle:[movieDictionary objectForKey:@"title"]
                                                imageUrl:[[movieDictionary objectForKey:@"images"] objectForKey:@"small"]
                                                  detail:[movieDictionary objectForKey:@"original_title"]
                                                duration:146];
-            [self.movies addObject:movie];
+            [movies addObject:movie];
         }
     }
 
@@ -1867,17 +1868,32 @@
                                                 NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
                                                 NSArray *moviesArray = [dataDictionary objectForKey:@"subjects"];
 //                                                NSLog(moviesArray);
-                                                self.movies = [[NSMutableArray array] initWithCapacity:[moviesArray count]];
+                                                movies = [[NSMutableArray array] initWithCapacity:[moviesArray count]];
                                                 for (NSDictionary *movieDictionary in moviesArray) {
                                                     Movie *movie = [[Movie alloc] initWithTitle:[movieDictionary objectForKey:@"title"]
                                                                                        imageUrl:[[movieDictionary objectForKey:@"images"] objectAtIndex:0]
                                                                                          detail:[movieDictionary objectForKey:@"original_title"]
                                                                                        duration:[[movieDictionary objectForKey:@"durations"] objectAtIndex:0]];
-                                                    [self.movies addObject:movie];
+                                                    [movies addObject:movie];
                                                 }
                                             }];
     [task resume];
 }
 
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    MovieTableViewCell *movieTableViewCell = [tableView dequeueReusableCellWithIdentifier:@"movieTableViewCell"];
+    //这种方式适用于系统本身的UITableViewCell或者在代码中添加控件的自定义TableViewCell
+//    if (!movieTableViewCell) {
+//        movieTableViewCell = [[MovieTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"movieTableViewCell"];
+//    }
+    Movie *movie = [movies objectAtIndex:[indexPath row]];
+    [movieTableViewCell initFromMovie:movie];
+    movieTableViewCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    return movieTableViewCell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [movies count];
+}
 
 @end
