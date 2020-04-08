@@ -1,5 +1,5 @@
 //
-//  MovieController.m
+//  TopMoviesController.m
 //  single-view-demo
 //
 //  Created by muyun on 2020/3/22.
@@ -7,12 +7,12 @@
 //
 
 #import <AFNetworking/AFHTTPSessionManager.h>
-#import "MovieController.h"
-#import "Movie.h"
+#import "TopMoviesController.h"
+#import "TopMovie.h"
 
 
-@implementation MovieController {
-    NSMutableArray<Movie *> *movies;
+@implementation TopMoviesController {
+    NSMutableArray<TopMovie *> *movies;
 }
 
 - (instancetype)initWithMovieUrl:(NSString *)movieUrl {
@@ -61,10 +61,10 @@
 
     movies = [NSMutableArray arrayWithCapacity:[moviesArray count]];
     for (NSDictionary *movieDictionary in moviesArray) {
-        Movie *movie = [[Movie alloc] initWithTitle:[movieDictionary objectForKey:@"title"]
-                                           imageUrl:[[movieDictionary objectForKey:@"images"] objectForKey:@"small"]
-                                             detail:[movieDictionary objectForKey:@"original_title"]
-                                           duration:[(NSNumber *) [[movieDictionary objectForKey:@"durations"] objectAtIndex:0] integerValue]];
+        TopMovie *movie = [[TopMovie alloc] initWithTitle:[movieDictionary objectForKey:@"title"]
+                                                 imageUrl:[[movieDictionary objectForKey:@"images"] objectForKey:@"small"]
+                                                   detail:[movieDictionary objectForKey:@"original_title"]
+                                                 duration:[(NSNumber *) [[movieDictionary objectForKey:@"durations"] objectAtIndex:0] integerValue]];
 
         [movies addObject:movie];
     }
@@ -77,7 +77,7 @@
     [self getMoviesFromNSData:data];
 }
 
-- (Movie *)getMovie:(NSUInteger)index {
+- (TopMovie *)getMovie:(NSUInteger)index {
     return [movies objectAtIndex:index];
 }
 

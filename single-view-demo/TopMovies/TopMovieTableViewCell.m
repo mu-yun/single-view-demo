@@ -1,5 +1,5 @@
 //
-//  MovieTableViewCell.m
+//  TopMovieTableViewCell.m
 //  single-view-demo
 //
 //  Created by muyun on 2020/3/22.
@@ -7,10 +7,10 @@
 //
 
 #import <SDWebImage/SDAnimatedImageView+WebCache.h>
-#import "MovieTableViewCell.h"
-#import "Movie.h"
+#import "TopMovieTableViewCell.h"
+#import "TopMovie.h"
 
-@implementation MovieTableViewCell
+@implementation TopMovieTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -23,7 +23,7 @@
     // Configure the view for the selected state
 }
 
-- (void)initFromMovie:(Movie *)movie {
+- (void)initFromMovie:(TopMovie *)movie {
     self.titleLabel.text = movie.title;
     self.detailLabel.text = movie.detail;
     // 1,根据URL 通过URLsession 下载 data

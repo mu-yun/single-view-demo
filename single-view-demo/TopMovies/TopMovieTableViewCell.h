@@ -1,5 +1,5 @@
 //
-//  MovieTableViewCell.h
+//  TopMovieTableViewCell.h
 //  single-view-demo
 //
 //  Created by muyun on 2020/3/22.
@@ -8,17 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@class Movie;
+@class TopMovie;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MovieTableViewCell : UITableViewCell
+@interface TopMovieTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *movieImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *detailLabel;
 
-- (void)initFromMovie:(Movie *)movie;
+- (void)initFromMovie:(TopMovie *)movie;
 
 @end
 

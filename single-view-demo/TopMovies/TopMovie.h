@@ -1,5 +1,5 @@
 //
-//  Movie.h
+//  TopMovie.h
 //  single-view-demo
 //
 //  Created by muyun on 2020/3/22.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface Movie : NSObject
+@interface TopMovie : NSObject
 
 @property(nonatomic, readonly) NSString *title;
 @property(nonatomic, readonly) NSString *imageUrl;

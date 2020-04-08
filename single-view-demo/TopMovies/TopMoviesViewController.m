@@ -1,37 +1,37 @@
 //
-//  MovieListViewController.m
+//  TopMoviesViewController.m
 //  single-view-demo
 //
 //  Created by muyun on 2020/3/22.
 //  Copyright © 2020 muyun. All rights reserved.
 //
 
-#import "MovieListViewController.h"
-#import "MovieController.h"
-#import "MovieTableViewCell.h"
-#import "Movie.h"
+#import "TopMoviesViewController.h"
+#import "TopMoviesController.h"
+#import "TopMovieTableViewCell.h"
+#import "TopMovie.h"
 
-@interface MovieListViewController () <UITableViewDelegate, UITableViewDataSource> {
-    MovieController *movieController;
+@interface TopMoviesViewController () <UITableViewDelegate, UITableViewDataSource> {
+    TopMoviesController *movieController;
 }
 
 @property(weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
-@implementation MovieListViewController
+@implementation TopMoviesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    movieController = [[MovieController alloc] initWithMovieUrl:@"https://douban.uieee.com/v2/movie/top250"];
+    movieController = [[TopMoviesController alloc] initWithMovieUrl:@"https://douban.uieee.com/v2/movie/top250"];
 
     //dataSource和delegate可以在storyboard通过拖拽指定
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
 
     //代码的方式注册自定义TableViewCell
-    //[self.tableView registerClass:[MovieTableViewCell class] forCellReuseIdentifier:@"movieTableViewCell"];
+    //[self.tableView registerClass:[TopMovieTableViewCell class] forCellReuseIdentifier:@"movieTableViewCell"];
 }
 
 /*
@@ -45,12 +45,12 @@
 */
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    MovieTableViewCell *movieTableViewCell = [tableView dequeueReusableCellWithIdentifier:@"movieTableViewCell"];
+    TopMovieTableViewCell *movieTableViewCell = [tableView dequeueReusableCellWithIdentifier:@"movieTableViewCell"];
     //这种方式适用于系统本身的UITableViewCell或者在代码中添加控件的自定义TableViewCell
 //    if (!movieTableViewCell) {
-//        movieTableViewCell = [[MovieTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"movieTableViewCell"];
+//        movieTableViewCell = [[TopMovieTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"movieTableViewCell"];
 //    }
-    Movie *movie = [movieController getMovie:indexPath.row];
+    TopMovie *movie = [movieController getMovie:indexPath.row];
     [movieTableViewCell initFromMovie:movie];
     movieTableViewCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return movieTableViewCell;

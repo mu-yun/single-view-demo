@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "ForgetPasswordViewController.h"
 #import "RegisterAccountViewController.h"
-#import "MovieListViewController.h"
+#import "TopMoviesViewController.h"
 #import "AppDelegate.h"
 #import "SceneDelegate.h"
 

@@ -1,5 +1,5 @@
 //
-//  MovieController.h
+//  TopMoviesController.h
 //  single-view-demo
 //
 //  Created by muyun on 2020/3/22.
@@ -9,14 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@class Movie;
+@class TopMovie;
 
 
-@interface MovieController : NSObject
+@interface TopMoviesController : NSObject
 
 - (instancetype)initWithMovieUrl:(NSString *)movieUrl;
 
-- (Movie *)getMovie:(NSUInteger)index;
+- (TopMovie *)getMovie:(NSUInteger)index;
 
 - (NSInteger)count;
 

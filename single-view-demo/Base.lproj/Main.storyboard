@@ -180,10 +180,10 @@
             </objects>
             <point key="canvasLocation" x="458" y="867"/>
         </scene>
-        <!--Movie List View Controller-->
+        <!--TopMovie List View Controller-->
         <scene sceneID="Lf2-yk-UVp">
             <objects>
-                <viewController storyboardIdentifier="movieListViewController" id="G0W-MU-vOq" customClass="MovieListViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="movieListViewController" id="G0W-MU-vOq" customClass="TopMoviesViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="chL-Df-y52">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -192,7 +192,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="movieTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieTableViewCell" rowHeight="249" id="bp9-PW-BYw" customClass="MovieTableViewCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="movieTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieTableViewCell" rowHeight="249" id="bp9-PW-BYw" customClass="TopMovieTableViewCell">
                                         <rect key="frame" x="0.0" y="28" width="414" height="249"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bp9-PW-BYw" id="V61-H7-NA8">

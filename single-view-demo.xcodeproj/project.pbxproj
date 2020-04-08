@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		4180D91AAC91972A569755F2 /* Pods_single_view_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D976B3F6CC201D4D378DB31E /* Pods_single_view_demo.framework */; };
 		5D5B934A1E4CF828C2837C21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B93158B28DD83CDA028F0 /* AppDelegate.m */; };
-		5D5B99210521DF24A95C9DBF /* MovieController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B9C718E7776178F2F15CD /* MovieController.m */; };
+		5D5B99210521DF24A95C9DBF /* TopMoviesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B9C718E7776178F2F15CD /* TopMoviesController.m */; };
 		5D5B9A7919D89B330B91330E /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B92DEAF742E112EC71A14 /* ForgetPasswordViewController.m */; };
-		5D5B9F4E65B565258082C412 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B92E572EC56F5453FE04D /* Movie.m */; };
+		5D5B9F4E65B565258082C412 /* TopMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B92E572EC56F5453FE04D /* TopMovie.m */; };
 		6205A6732420DF2D008A502D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6205A6722420DF2D008A502D /* SceneDelegate.m */; };
 		6205A6762420DF2D008A502D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6205A6752420DF2D008A502D /* ViewController.m */; };
 		6205A6792420DF2D008A502D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6205A6772420DF2D008A502D /* Main.storyboard */; };
@@ -20,8 +20,8 @@
 		6205A6812420DF2E008A502D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6205A6802420DF2E008A502D /* main.m */; };
 		6205A68B2420DF2F008A502D /* single_view_demoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6205A68A2420DF2F008A502D /* single_view_demoTests.m */; };
 		6205A6962420DF2F008A502D /* single_view_demoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6205A6952420DF2F008A502D /* single_view_demoUITests.m */; };
-		627D361624275D2000B8DCEB /* MovieListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 627D361524275D2000B8DCEB /* MovieListViewController.m */; };
-		627D3619242788CF00B8DCEB /* MovieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 627D3618242788CF00B8DCEB /* MovieTableViewCell.m */; };
+		627D361624275D2000B8DCEB /* TopMoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 627D361524275D2000B8DCEB /* TopMoviesViewController.m */; };
+		627D3619242788CF00B8DCEB /* TopMovieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 627D3618242788CF00B8DCEB /* TopMovieTableViewCell.m */; };
 		62F6F6E2242295E800B7D820 /* RegisterAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F6F6E1242295E800B7D820 /* RegisterAccountViewController.m */; };
 		D3607F2DFF48A418AEA61769 /* Pods_single_view_demoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E11AC35AD628EE0628E798 /* Pods_single_view_demoTests.framework */; };
 		E5C47A2F0A202324FCF6C8D5 /* Pods_single_view_demo_single_view_demoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5511F886F0CA2F9CC270566B /* Pods_single_view_demo_single_view_demoUITests.framework */; };
@@ -50,12 +50,12 @@
 		3596D09C1704D7405B57394A /* Pods-single-view-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-single-view-demo.release.xcconfig"; path = "Target Support Files/Pods-single-view-demo/Pods-single-view-demo.release.xcconfig"; sourceTree = "<group>"; };
 		5511F886F0CA2F9CC270566B /* Pods_single_view_demo_single_view_demoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_single_view_demo_single_view_demoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D5B92DEAF742E112EC71A14 /* ForgetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPasswordViewController.m; sourceTree = "<group>"; };
-		5D5B92E572EC56F5453FE04D /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		5D5B92E572EC56F5453FE04D /* TopMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopMovie.m; sourceTree = "<group>"; };
 		5D5B93158B28DD83CDA028F0 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5D5B9696C50A14AEB2249C69 /* ForgetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPasswordViewController.h; sourceTree = "<group>"; };
-		5D5B9C718E7776178F2F15CD /* MovieController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieController.m; sourceTree = "<group>"; };
-		5D5B9C7591A48469DB2B4151 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
-		5D5B9E50E5D6360E8B26525F /* MovieController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieController.h; sourceTree = "<group>"; };
+		5D5B9C718E7776178F2F15CD /* TopMoviesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopMoviesController.m; sourceTree = "<group>"; };
+		5D5B9C7591A48469DB2B4151 /* TopMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopMovie.h; sourceTree = "<group>"; };
+		5D5B9E50E5D6360E8B26525F /* TopMoviesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopMoviesController.h; sourceTree = "<group>"; };
 		5D5B9EF9367D9B6DE4E0C04D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6205A66B2420DF2D008A502D /* single-view-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "single-view-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6205A6712420DF2D008A502D /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
@@ -73,10 +73,10 @@
 		6205A6912420DF2F008A502D /* single-view-demoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "single-view-demoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6205A6952420DF2F008A502D /* single_view_demoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = single_view_demoUITests.m; sourceTree = "<group>"; };
 		6205A6972420DF2F008A502D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		627D361424275D2000B8DCEB /* MovieListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieListViewController.h; sourceTree = "<group>"; };
-		627D361524275D2000B8DCEB /* MovieListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieListViewController.m; sourceTree = "<group>"; };
-		627D3617242788CF00B8DCEB /* MovieTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieTableViewCell.h; sourceTree = "<group>"; };
-		627D3618242788CF00B8DCEB /* MovieTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieTableViewCell.m; sourceTree = "<group>"; };
+		627D361424275D2000B8DCEB /* TopMoviesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopMoviesViewController.h; sourceTree = "<group>"; };
+		627D361524275D2000B8DCEB /* TopMoviesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopMoviesViewController.m; sourceTree = "<group>"; };
+		627D3617242788CF00B8DCEB /* TopMovieTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopMovieTableViewCell.h; sourceTree = "<group>"; };
+		627D3618242788CF00B8DCEB /* TopMovieTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopMovieTableViewCell.m; sourceTree = "<group>"; };
 		62F6F6E0242295E800B7D820 /* RegisterAccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterAccountViewController.h; sourceTree = "<group>"; };
 		62F6F6E1242295E800B7D820 /* RegisterAccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterAccountViewController.m; sourceTree = "<group>"; };
 		7426F085654F46C4FF3464EA /* Pods-single-view-demo-single-view-demoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-single-view-demo-single-view-demoUITests.release.xcconfig"; path = "Target Support Files/Pods-single-view-demo-single-view-demoUITests/Pods-single-view-demo-single-view-demoUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -123,19 +123,19 @@
 			path = ForgetPassword;
 			sourceTree = "<group>";
 		};
-		5D5B939CFD1B7641FC18D8DF /* MovieList */ = {
+		5D5B939CFD1B7641FC18D8DF /* TopMovies */ = {
 			isa = PBXGroup;
 			children = (
-				627D361424275D2000B8DCEB /* MovieListViewController.h */,
-				627D361524275D2000B8DCEB /* MovieListViewController.m */,
-				5D5B9C718E7776178F2F15CD /* MovieController.m */,
-				5D5B9E50E5D6360E8B26525F /* MovieController.h */,
-				5D5B92E572EC56F5453FE04D /* Movie.m */,
-				5D5B9C7591A48469DB2B4151 /* Movie.h */,
-				627D3617242788CF00B8DCEB /* MovieTableViewCell.h */,
-				627D3618242788CF00B8DCEB /* MovieTableViewCell.m */,
+				627D361424275D2000B8DCEB /* TopMoviesViewController.h */,
+				627D361524275D2000B8DCEB /* TopMoviesViewController.m */,
+				5D5B9C718E7776178F2F15CD /* TopMoviesController.m */,
+				5D5B9E50E5D6360E8B26525F /* TopMoviesController.h */,
+				5D5B92E572EC56F5453FE04D /* TopMovie.m */,
+				5D5B9C7591A48469DB2B4151 /* TopMovie.h */,
+				627D3617242788CF00B8DCEB /* TopMovieTableViewCell.h */,
+				627D3618242788CF00B8DCEB /* TopMovieTableViewCell.m */,
 			);
-			path = MovieList;
+			path = TopMovies;
 			sourceTree = "<group>";
 		};
 		5D5B98868E42248D2537CC1D /* RegisterAccount */ = {
@@ -185,7 +185,7 @@
 				5D5B9EF9367D9B6DE4E0C04D /* AppDelegate.h */,
 				5D5B93158B28DD83CDA028F0 /* AppDelegate.m */,
 				5D5B98868E42248D2537CC1D /* RegisterAccount */,
-				5D5B939CFD1B7641FC18D8DF /* MovieList */,
+				5D5B939CFD1B7641FC18D8DF /* TopMovies */,
 			);
 			path = "single-view-demo";
 			sourceTree = "<group>";
@@ -470,15 +470,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				6205A6762420DF2D008A502D /* ViewController.m in Sources */,
-				627D361624275D2000B8DCEB /* MovieListViewController.m in Sources */,
+				627D361624275D2000B8DCEB /* TopMoviesViewController.m in Sources */,
 				6205A6812420DF2E008A502D /* main.m in Sources */,
 				6205A6732420DF2D008A502D /* SceneDelegate.m in Sources */,
-				627D3619242788CF00B8DCEB /* MovieTableViewCell.m in Sources */,
+				627D3619242788CF00B8DCEB /* TopMovieTableViewCell.m in Sources */,
 				62F6F6E2242295E800B7D820 /* RegisterAccountViewController.m in Sources */,
 				5D5B934A1E4CF828C2837C21 /* AppDelegate.m in Sources */,
 				5D5B9A7919D89B330B91330E /* ForgetPasswordViewController.m in Sources */,
-				5D5B99210521DF24A95C9DBF /* MovieController.m in Sources */,
-				5D5B9F4E65B565258082C412 /* Movie.m in Sources */,
+				5D5B99210521DF24A95C9DBF /* TopMoviesController.m in Sources */,
+				5D5B9F4E65B565258082C412 /* TopMovie.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

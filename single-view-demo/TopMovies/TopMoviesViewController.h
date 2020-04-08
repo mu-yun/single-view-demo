@@ -1,5 +1,5 @@
 //
-//  MovieListViewController.h
+//  TopMoviesViewController.h
 //  single-view-demo
 //
 //  Created by muyun on 2020/3/22.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MovieListViewController : UIViewController
+@interface TopMoviesViewController : UIViewController
 
 @end
 
