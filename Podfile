@@ -9,6 +9,7 @@ target 'single-view-demo' do
   pod 'Masonry'
   pod 'SDWebImage'
   pod 'AFNetworking', '~> 3.0'
+  pod 'MBProgressHUD', '~> 1.2.0'
 
   target 'single-view-demoTests' do
     inherit! :search_paths
