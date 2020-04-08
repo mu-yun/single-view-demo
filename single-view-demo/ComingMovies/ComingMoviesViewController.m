@@ -131,7 +131,7 @@ static NSString *const AnticipatedMovieSectionIdentifier = @"AnticipatedMovieSec
         if (section == AnticipatedMovieSection) {
             return [weakSelf createAnticipatedMovieSection:layoutEnvironment];
         }
-        return [weakSelf createMovieSection:layoutEnvironment];
+        return [weakSelf createComingMovieSection:layoutEnvironment];
     };
 
     return [[UICollectionViewCompositionalLayout alloc] initWithSectionProvider:sectionProvider];
@@ -226,13 +226,14 @@ static NSString *const AnticipatedMovieSectionIdentifier = @"AnticipatedMovieSec
 }
 
 - (MBProgressHUD *)configureProgressHUD {
-    MBProgressHUD *progressHUD = [[MBProgressHUD alloc] initWithView:self.collectionView];
+    MBProgressHUD *progressHUD = [[MBProgressHUD alloc] initWithView:self.view];
     progressHUD.mode = MBProgressHUDModeText;
     progressHUD.contentColor = [UIColor whiteColor];
     progressHUD.label.text = @"✓";
     progressHUD.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
     progressHUD.bezelView.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.8];
     progressHUD.bezelView.layer.cornerRadius = 20;
+    progressHUD.userInteractionEnabled = NO;
     self.progressHUD = progressHUD;
     [self.view addSubview:progressHUD];
     return progressHUD;
@@ -294,7 +295,7 @@ static NSString *const AnticipatedMovieSectionIdentifier = @"AnticipatedMovieSec
     return section;
 }
 
-- (NSCollectionLayoutSection *)createMovieSection:(id <NSCollectionLayoutEnvironment>)layoutEnvironment {
+- (NSCollectionLayoutSection *)createComingMovieSection:(id <NSCollectionLayoutEnvironment>)layoutEnvironment {
     //item
     NSCollectionLayoutSize *itemSize = [NSCollectionLayoutSize sizeWithWidthDimension:[NSCollectionLayoutDimension fractionalWidthDimension:1.0]
                                                                       heightDimension:[NSCollectionLayoutDimension fractionalHeightDimension:1.0]];
