@@ -1,5 +1,5 @@
 //
-//  MovieViewModel.h
+//  MovieController.h
 //  single-view-demo
 //
 //  Created by muyun on 2020/3/22.
@@ -12,8 +12,12 @@
 @class Movie;
 
 
-@interface MovieViewModel : NSObject<UITableViewDataSource>
+@interface MovieController : NSObject
 
 - (instancetype)initWithMovieUrl:(NSString *)movieUrl;
+
+- (Movie *)getMovie:(NSUInteger)index;
+
+- (NSInteger)count;
 
 @end

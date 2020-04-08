@@ -7,15 +7,15 @@
 //
 
 #import "MovieListViewController.h"
-#import "MovieViewModel.h"
+#import "MovieController.h"
 #import "MovieTableViewCell.h"
 #import "Movie.h"
 
-@interface MovieListViewController () <UITableViewDelegate>
+@interface MovieListViewController () <UITableViewDelegate, UITableViewDataSource> {
+    MovieController *movieController;
+}
 
 @property(weak, nonatomic) IBOutlet UITableView *tableView;
-
-@property MovieViewModel *viewModel;
 
 @end
 
@@ -24,13 +24,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.viewModel = [[MovieViewModel alloc] initWithMovieUrl:@"https://douban.uieee.com/v2/movie/top250"];
+    movieController = [[MovieController alloc] initWithMovieUrl:@"https://douban.uieee.com/v2/movie/top250"];
 
     //dataSource和delegate可以在storyboard通过拖拽指定
-    self.tableView.dataSource = self.viewModel;
+    self.tableView.dataSource = self;
     self.tableView.delegate = self;
 
-    //代码的方式注册自定义TableViewCell，针对xib文件
+    //代码的方式注册自定义TableViewCell
     //[self.tableView registerClass:[MovieTableViewCell class] forCellReuseIdentifier:@"movieTableViewCell"];
 }
 
@@ -43,5 +43,21 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    MovieTableViewCell *movieTableViewCell = [tableView dequeueReusableCellWithIdentifier:@"movieTableViewCell"];
+    //这种方式适用于系统本身的UITableViewCell或者在代码中添加控件的自定义TableViewCell
+//    if (!movieTableViewCell) {
+//        movieTableViewCell = [[MovieTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"movieTableViewCell"];
+//    }
+    Movie *movie = [movieController getMovie:indexPath.row];
+    [movieTableViewCell initFromMovie:movie];
+    movieTableViewCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    return movieTableViewCell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [movieController count];
+}
 
 @end

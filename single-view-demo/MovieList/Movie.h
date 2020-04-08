@@ -14,11 +14,11 @@
 @property(nonatomic, readonly) NSString *title;
 @property(nonatomic, readonly) NSString *imageUrl;
 @property(nonatomic, readonly) NSString *detail;
-@property(nonatomic, readonly) int duration;
+@property(nonatomic, readonly) NSInteger duration;
 
-- (instancetype)initWithTitle:(NSString *)title imageUrl:(NSString *)imageUrl detail:(NSString *)detail duration:(int)duration;
+- (instancetype)initWithTitle:(NSString *)title imageUrl:(NSString *)imageUrl detail:(NSString *)detail duration:(NSInteger)duration;
 
-+ (instancetype)movieWithTitle:(NSString *)title imageUrl:(NSString *)imageUrl detail:(NSString *)detail duration:(int)duration;
++ (instancetype)movieWithTitle:(NSString *)title imageUrl:(NSString *)imageUrl detail:(NSString *)detail duration:(NSInteger)duration;
 
 
 @end

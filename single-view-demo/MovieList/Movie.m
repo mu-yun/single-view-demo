@@ -13,7 +13,7 @@
 
 }
 
-- (instancetype)initWithTitle:(NSString *)title imageUrl:(NSString *)imageUrl detail:(NSString *)detail duration:(int)duration {
+- (instancetype)initWithTitle:(NSString *)title imageUrl:(NSString *)imageUrl detail:(NSString *)detail duration:(NSInteger)duration {
     self = [super init];
     if (self) {
         _title = title;
@@ -25,10 +25,9 @@
     return self;
 }
 
-+ (instancetype)movieWithTitle:(NSString *)title imageUrl:(NSString *)imageUrl detail:(NSString *)detail duration:(int)duration {
++ (instancetype)movieWithTitle:(NSString *)title imageUrl:(NSString *)imageUrl detail:(NSString *)detail duration:(NSInteger)duration {
     return [[self alloc] initWithTitle:title imageUrl:imageUrl detail:detail duration:duration];
 }
-
 
 
 @end

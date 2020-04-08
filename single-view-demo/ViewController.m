@@ -36,7 +36,7 @@
     //弹出页面
 //    [self presentViewController:viewController animated:YES completion:nil];
     //跳转页面，并且将viewController设置为rootViewController TODO why?
-    UIWindowScene *scene = [UIApplication sharedApplication].openSessions.allObjects.lastObject.scene;
+    UIScene *scene = [UIApplication sharedApplication].openSessions.allObjects.lastObject.scene;
     SceneDelegate *sceneDelegate = (SceneDelegate *) scene.delegate;
     sceneDelegate.window.rootViewController = viewController;
     [sceneDelegate.window makeKeyAndVisible];

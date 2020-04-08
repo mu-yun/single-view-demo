@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		4180D91AAC91972A569755F2 /* Pods_single_view_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D976B3F6CC201D4D378DB31E /* Pods_single_view_demo.framework */; };
 		5D5B934A1E4CF828C2837C21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B93158B28DD83CDA028F0 /* AppDelegate.m */; };
-		5D5B99210521DF24A95C9DBF /* MovieViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B9C718E7776178F2F15CD /* MovieViewModel.m */; };
+		5D5B99210521DF24A95C9DBF /* MovieController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B9C718E7776178F2F15CD /* MovieController.m */; };
 		5D5B9A7919D89B330B91330E /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B92DEAF742E112EC71A14 /* ForgetPasswordViewController.m */; };
 		5D5B9F4E65B565258082C412 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B92E572EC56F5453FE04D /* Movie.m */; };
 		6205A6732420DF2D008A502D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6205A6722420DF2D008A502D /* SceneDelegate.m */; };
@@ -53,9 +53,9 @@
 		5D5B92E572EC56F5453FE04D /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
 		5D5B93158B28DD83CDA028F0 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5D5B9696C50A14AEB2249C69 /* ForgetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPasswordViewController.h; sourceTree = "<group>"; };
-		5D5B9C718E7776178F2F15CD /* MovieViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieViewModel.m; sourceTree = "<group>"; };
+		5D5B9C718E7776178F2F15CD /* MovieController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieController.m; sourceTree = "<group>"; };
 		5D5B9C7591A48469DB2B4151 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
-		5D5B9E50E5D6360E8B26525F /* MovieViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieViewModel.h; sourceTree = "<group>"; };
+		5D5B9E50E5D6360E8B26525F /* MovieController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieController.h; sourceTree = "<group>"; };
 		5D5B9EF9367D9B6DE4E0C04D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6205A66B2420DF2D008A502D /* single-view-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "single-view-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6205A6712420DF2D008A502D /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
@@ -128,8 +128,8 @@
 			children = (
 				627D361424275D2000B8DCEB /* MovieListViewController.h */,
 				627D361524275D2000B8DCEB /* MovieListViewController.m */,
-				5D5B9C718E7776178F2F15CD /* MovieViewModel.m */,
-				5D5B9E50E5D6360E8B26525F /* MovieViewModel.h */,
+				5D5B9C718E7776178F2F15CD /* MovieController.m */,
+				5D5B9E50E5D6360E8B26525F /* MovieController.h */,
 				5D5B92E572EC56F5453FE04D /* Movie.m */,
 				5D5B9C7591A48469DB2B4151 /* Movie.h */,
 				627D3617242788CF00B8DCEB /* MovieTableViewCell.h */,
@@ -477,7 +477,7 @@
 				62F6F6E2242295E800B7D820 /* RegisterAccountViewController.m in Sources */,
 				5D5B934A1E4CF828C2837C21 /* AppDelegate.m in Sources */,
 				5D5B9A7919D89B330B91330E /* ForgetPasswordViewController.m in Sources */,
-				5D5B99210521DF24A95C9DBF /* MovieViewModel.m in Sources */,
+				5D5B99210521DF24A95C9DBF /* MovieController.m in Sources */,
 				5D5B9F4E65B565258082C412 /* Movie.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
