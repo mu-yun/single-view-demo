@@ -27,6 +27,7 @@
     [headerLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.and.leading.equalTo(self);
     }];
+    self.backgroundColor = [UIColor whiteColor];
 }
 
 

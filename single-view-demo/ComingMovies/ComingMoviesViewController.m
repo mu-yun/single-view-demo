@@ -23,8 +23,6 @@
 
 @interface ComingMoviesViewController () <UICollectionViewDelegate, MovieCellProtocol, TrailerCellProtocol>
 
-//@property(strong, nonatomic) IBOutlet UICollectionView *collectionView;
-
 @property UICollectionViewDiffableDataSource *dataSource;
 
 @property NSDiffableDataSourceSnapshot<NSString *, id> *snapshot;
