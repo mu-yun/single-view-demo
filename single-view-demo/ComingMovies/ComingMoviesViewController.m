@@ -239,7 +239,7 @@ static NSString *const AnticipatedMovieSectionIdentifier = @"AnticipatedMovieSec
             boundarySupplementaryItemWithLayoutSize:headerSize
                                         elementKind:UICollectionElementKindSectionHeader
                                           alignment:NSRectAlignmentTop];
-    headerSupplementary.pinToVisibleBounds = YES; //TODO bug
+//    headerSupplementary.pinToVisibleBounds = YES; //TODO bug
 //    headerSupplementary.zIndex = 2;
     return @[headerSupplementary];
 }
@@ -258,7 +258,7 @@ static NSString *const AnticipatedMovieSectionIdentifier = @"AnticipatedMovieSec
     NSCollectionLayoutSection *section = [NSCollectionLayoutSection sectionWithGroup:group];
 
     section.interGroupSpacing = 10;
-    section.supplementariesFollowContentInsets = false;
+    section.supplementariesFollowContentInsets = NO;
     section.contentInsets = NSDirectionalEdgeInsetsMake(0.0, 20.0, 0.0, 20.0);
     section.orthogonalScrollingBehavior = UICollectionLayoutSectionOrthogonalScrollingBehaviorContinuousGroupLeadingBoundary;
     section.boundarySupplementaryItems = [self getSupplementaryItems];
@@ -282,7 +282,7 @@ static NSString *const AnticipatedMovieSectionIdentifier = @"AnticipatedMovieSec
     NSCollectionLayoutSection *section = [NSCollectionLayoutSection sectionWithGroup:group];
 
     section.interGroupSpacing = 5;
-    section.supplementariesFollowContentInsets = false;
+    section.supplementariesFollowContentInsets = NO;
     section.contentInsets = NSDirectionalEdgeInsetsMake(0.0, 20.0, 0.0, 20.0);
     section.orthogonalScrollingBehavior = UICollectionLayoutSectionOrthogonalScrollingBehaviorContinuousGroupLeadingBoundary;
     section.boundarySupplementaryItems = [self getSupplementaryItems];
@@ -305,7 +305,7 @@ static NSString *const AnticipatedMovieSectionIdentifier = @"AnticipatedMovieSec
     NSCollectionLayoutSection *section = [NSCollectionLayoutSection sectionWithGroup:group];
 
     section.interGroupSpacing = 1;
-    section.supplementariesFollowContentInsets = false;
+    section.supplementariesFollowContentInsets = NO;
     section.contentInsets = NSDirectionalEdgeInsetsMake(0.0, 20.0, 0.0, 20.0);
     section.boundarySupplementaryItems = [self getSupplementaryItems];
     return section;

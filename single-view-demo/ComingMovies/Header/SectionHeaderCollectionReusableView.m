@@ -25,7 +25,8 @@
     self.headerLabel = headerLabel;
     [self addSubview:headerLabel];
     [headerLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.and.leading.equalTo(self);
+        make.centerY.equalTo(self);
+        make.leading.equalTo(@20);
     }];
     self.backgroundColor = [UIColor whiteColor];
 }
