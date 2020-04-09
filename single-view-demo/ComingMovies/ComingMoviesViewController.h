@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ComingMoviesViewController : UIViewController
+@interface ComingMoviesViewController : UICollectionViewController
 
 @end
 

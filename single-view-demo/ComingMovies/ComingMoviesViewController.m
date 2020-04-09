@@ -23,7 +23,7 @@
 
 @interface ComingMoviesViewController () <UICollectionViewDelegate, MovieCellProtocol, TrailerCellProtocol>
 
-@property(strong, nonatomic) IBOutlet UICollectionView *collectionView;
+//@property(strong, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @property UICollectionViewDiffableDataSource *dataSource;
 
@@ -53,9 +53,14 @@ static NSString *const SectionHeaderIdentifier = @"sectionHeader";
 static NSString *const TrailerSectionIdentifier = @"TrailerSection";
 static NSString *const AnticipatedMovieSectionIdentifier = @"AnticipatedMovieSection";
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    //large title
+    self.navigationController.navigationBar.prefersLargeTitles = YES;
+    self.navigationItem.title = @"待映";
 
     [self configureCollectionView];
     [self configureDataSource];
@@ -73,7 +78,6 @@ static NSString *const AnticipatedMovieSectionIdentifier = @"AnticipatedMovieSec
     dates = [[NSMutableArray alloc] init];
 
     [self.indicatorView startAnimating];
-
     [self refresh];
 }
 
@@ -138,21 +142,13 @@ static NSString *const AnticipatedMovieSectionIdentifier = @"AnticipatedMovieSec
 }
 
 - (UICollectionView *)configureCollectionView {
-    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:[self createLayout]];
-    collectionView.backgroundColor = [UIColor systemBackgroundColor];
-    [self.view addSubview:collectionView];
-    [collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop);
-        make.left.equalTo(self.view.mas_safeAreaLayoutGuideLeft);
-        make.right.equalTo(self.view.mas_safeAreaLayoutGuideRight);
-        make.bottom.equalTo(self.view.mas_safeAreaLayoutGuideBottom);
-    }];
+    UICollectionView *collectionView = self.collectionView;
+    collectionView.collectionViewLayout = [self createLayout];
 
     [collectionView registerClass:[TrailerCollectionViewCell class] forCellWithReuseIdentifier:TrailerCellIdentifier];
     [collectionView registerClass:[AnticipatedMovieCollectionViewCell class] forCellWithReuseIdentifier:AnticipatedCellIdentifier];
     [collectionView registerClass:[ComingMovieCollectionViewCell class] forCellWithReuseIdentifier:MovieCellIdentifier];
     [collectionView registerClass:[SectionHeaderCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:SectionHeaderIdentifier];
-    self.collectionView = collectionView;
 
     return collectionView;
 }
@@ -208,8 +204,7 @@ static NSString *const AnticipatedMovieSectionIdentifier = @"AnticipatedMovieSec
 
 - (UIRefreshControl *)configureRefreshControl {
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
-    refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Loading..."];
-    refreshControl.backgroundColor = [UIColor colorWithWhite:0.9 alpha:0.5];
+//    refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Loading..."];
     self.refreshControl = refreshControl;
     [refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
     return refreshControl;

@@ -286,7 +286,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="RXU-O0-jz8" kind="relationship" relationship="viewControllers" id="tZB-QO-zKN"/>
+                        <segue destination="VZx-2R-50o" kind="relationship" relationship="viewControllers" id="9BL-7n-2kC"/>
                         <segue destination="G0W-MU-vOq" kind="relationship" relationship="viewControllers" id="VjH-0G-7bj"/>
                         <segue destination="nCW-7M-f3d" kind="relationship" relationship="viewControllers" id="m7d-O2-YNy"/>
                     </connections>
@@ -295,21 +295,48 @@
             </objects>
             <point key="canvasLocation" x="852" y="35"/>
         </scene>
-        <!--Coming Movies View Controller-->
-        <scene sceneID="kQz-bR-fe5">
+        <!--Navigation Controller-->
+        <scene sceneID="H56-89-pPz">
             <objects>
-                <viewController id="RXU-O0-jz8" customClass="ComingMoviesViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qEb-De-pEd">
+                <navigationController id="VZx-2R-50o" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="recents" id="rOr-TM-KBN"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FUR-lN-2dI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="3PA-Tw-jlo" kind="relationship" relationship="rootViewController" id="3I9-v5-9YK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sIB-p0-Q4I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1726" y="-757"/>
+        </scene>
+        <!--Coming Movies View Controller-->
+        <scene sceneID="Rje-Bg-dZf">
+            <objects>
+                <collectionViewController id="3PA-Tw-jlo" customClass="ComingMoviesViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="epm-Sy-Ph6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="fft-Bc-xL2"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" systemItem="recents" id="r7x-dG-fzF"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9FD-gi-nQP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9eN-iU-TqN">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="3PA-Tw-jlo" id="o0O-WM-m75"/>
+                            <outlet property="delegate" destination="3PA-Tw-jlo" id="PhQ-VS-4kI"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="ROJ-Xg-J9R"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5m4-4Q-1s1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1635" y="-657"/>
+            <point key="canvasLocation" x="2712" y="-1401"/>
         </scene>
     </scenes>
     <resources>
